@@ -26,87 +26,80 @@
 }
 
 .header .header-hero {
-  display: flex;
   padding: var(--sp-800) var(--sp-1000);
 
-  background-image:
-  url("../assets/desktop/image-hero-left.png"),
-  url("../assets/desktop/image-hero-right.png");
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-content: center;
+  justify-content: center;
+  column-gap: var(--sp-400);
 
-  background-position:
-  left var(--sp-800),
-  right calc(2 * var(--sp-800));
 
-  // background-size: auto calc(100% - (2 * var(--sp-800)));
-  background-size: 394px 303px;
-  background-repeat: no-repeat;
+  .hero-image-left {
+    position: relative;
+    left: -186px;
+  }
 
-  .header-hero-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-content: center;
+  .hero-image-right {
+    position: relative;
+    top: 57px;
+    left: 96px;
+  }
+  .header-hero-grid-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-400);
+    align-items: center;
     justify-content: center;
-    column-gap: var(--sp-400);
+    text-align: center;
+    grid-column: 2;
 
-    > * {
-      grid-column: 2;
+    .header-hero-heading {
+      @include fonts.text-preset-1;
+      color: colors.$slate-900;
+      min-width: 448px;
     }
 
-    .header-hero-grid-content {
+    .header-hero-copy {
+      @include fonts.text-preset-4;
+      color: colors.$slate-600;
+    }
+
+    .header-hero-buttons {
       display: flex;
-      flex-direction: column;
-      gap: var(--sp-400);
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      gap: var(--sp-200);
 
-      .header-hero-heading {
-        @include fonts.text-preset-1;
-        color: colors.$slate-900;
-        min-width: 448px;
+    }
+
+    .header-hero-download-button {
+      background-color: colors.$cyan-600;
+
+      &:hover, &:focus {
+        background-color: #71C0D4;
       }
 
-      .header-hero-copy {
-        @include fonts.text-preset-4;
-        color: colors.$slate-600;
-      }
+      @include fonts.text-preset-5;
 
-      .header-hero-buttons {
-        display: flex;
-        gap: var(--sp-200);
-
-      }
-
-      .header-hero-download-button {
-        background-color: colors.$cyan-600;
-
-        &:hover, &:focus {
-          background-color: #71C0D4;
-        }
-
-        @include fonts.text-preset-5;
-
-        .text {
-          color: colors.$white;
-        }
-
-        .version {
-          color: colors.$cyan-300;
-        }
-      }
-
-      .header-hero-whatisit-button {
-        &:hover, &:focus {
-          background-color: #B186DD;
-        }
-        background-color: colors.$purple-600;
-        @include fonts.text-preset-5;
+      .text {
         color: colors.$white;
       }
 
-
-
+      .version {
+        color: colors.$cyan-300;
+      }
     }
+
+    .header-hero-whatisit-button {
+      &:hover, &:focus {
+        background-color: #B186DD;
+      }
+      background-color: colors.$purple-600;
+      @include fonts.text-preset-5;
+      color: colors.$white;
+    }
+
+
+
   }
 }
 
@@ -212,4 +205,9 @@
     }
 
   }
+}
+
+
+@media (max-width: 768px) {
+
 }
