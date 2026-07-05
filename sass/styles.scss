@@ -78,7 +78,12 @@
       }
 
       .header-hero-download-button {
-        background-color: #71C0D4;
+        background-color: colors.$cyan-600;
+
+        &:hover, &:focus {
+          background-color: #71C0D4;
+        }
+
         @include fonts.text-preset-5;
 
         .text {
@@ -91,7 +96,10 @@
       }
 
       .header-hero-whatisit-button {
-        background-color: #B186DD;
+        &:hover, &:focus {
+          background-color: #B186DD;
+        }
+        background-color: colors.$purple-600;
         @include fonts.text-preset-5;
         color: colors.$white;
       }
@@ -192,7 +200,10 @@
     .button-component {
       justify-self: end;
       align-self: start;
-      background-color: #B18BDD;
+      background-color: colors.$purple-600;
+      &:hover, &:focus {
+        background-color: #B18BDD;
+      }
       @include fonts.text-preset-5;
       color: colors.$white;
       .version-text {

@@ -116,7 +116,12 @@
   gap: var(--sp-200);
 }
 .header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-download-button {
+  background-color: #4D96A9;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-download-button:hover, .header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-download-button:focus {
   background-color: #71C0D4;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-download-button {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 900;
   font-size: 1rem;
@@ -129,8 +134,11 @@
 .header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-download-button .version {
   color: #8FE3F9;
 }
-.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-whatisit-button {
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-whatisit-button:hover, .header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-whatisit-button:focus {
   background-color: #B186DD;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-whatisit-button {
+  background-color: #855FB1;
   font-family: "Red Hat Display", sans-serif;
   font-weight: 900;
   font-size: 1rem;
@@ -232,7 +240,12 @@
 .last-section footer .button-component {
   justify-self: end;
   align-self: start;
+  background-color: #855FB1;
+}
+.last-section footer .button-component:hover, .last-section footer .button-component:focus {
   background-color: #B18BDD;
+}
+.last-section footer .button-component {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 900;
   font-size: 1rem;
