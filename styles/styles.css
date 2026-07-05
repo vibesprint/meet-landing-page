@@ -1,5 +1,62 @@
-body {
+:root {
+  --sp-1400: 112px;
+  --sp-1000: 80px;
+  --sp-900: 72px;
+  --sp-800: 64px;
+  --sp-700: 56px;
+  --sp-500: 40px;
+  --sp-400: 32px;
+  --sp-300: 24px;
+  --sp-200: 16px;
+  --sp-100: 8px;
+  --sp-50: 4px;
+}
+
+* {
   margin: 0;
+}
+
+.TODO {
+  display: none;
+}
+
+.header .header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: var(--sp-1000);
+}
+.header .header-logo .header-logo-img {
+  width: 118px;
+  height: 28px;
+}
+
+.header .header-hero {
+  display: flex;
+  padding: var(--sp-800) var(--sp-1000);
+  background-image: url("../assets/desktop/image-hero-left.png"), url("../assets/desktop/image-hero-right.png");
+  background-position: left center, right center;
+  background-size: auto calc(100% - 2 * var(--sp-800));
+  background-repeat: no-repeat;
+}
+.header .header-hero .header-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  justify-content: center;
+  column-gap: var(--sp-400);
+}
+.header .header-hero .header-hero-grid > * {
+  grid-column: 2;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-400);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,60 @@
-body {
+@use 'spacings';
+
+
+* {
   margin: 0;
+}
+
+.TODO {
+  display: none;
+}
+
+.header .header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: var(--sp-1000);
+
+  .header-logo-img {
+    width: 118px;
+    height: 28px
+  }
+}
+
+.header .header-hero {
+  display: flex;
+  padding: var(--sp-800) var(--sp-1000);
+
+  background-image:
+  url("../assets/desktop/image-hero-left.png"),
+  url("../assets/desktop/image-hero-right.png");
+
+  background-position:
+  left center,
+  right center;
+
+  background-size: auto calc(100% - (2 * var(--sp-800)));
+  background-repeat: no-repeat;
+
+  .header-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    justify-content: center;
+    column-gap: var(--sp-400);
+
+    > * {
+      grid-column: 2;
+    }
+
+    .header-hero-grid-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-400);
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
 }
