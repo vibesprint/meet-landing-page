@@ -72,6 +72,7 @@
   padding: var(--sp-800) var(--sp-1000);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "left-hero text-content right-hero";
   align-content: center;
   justify-content: center;
   column-gap: var(--sp-400);
@@ -79,11 +80,13 @@
 .header .header-hero .hero-image-left {
   position: relative;
   left: -186px;
+  grid-area: left-hero;
 }
 .header .header-hero .hero-image-right {
   position: relative;
   top: 57px;
   left: 96px;
+  grid-area: right-hero;
 }
 .header .header-hero .header-hero-grid-content {
   display: flex;
@@ -93,6 +96,7 @@
   justify-content: center;
   text-align: center;
   grid-column: 2;
+  grid-area: text-content;
 }
 .header .header-hero .header-hero-grid-content .header-hero-heading {
   font-family: "Red Hat Display", sans-serif;
@@ -157,16 +161,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: var(--sp-800);
+  max-width: 100%;
 }
 .middle-section .middle-section-content .images {
   display: flex;
   gap: var(--sp-400);
 }
 .middle-section .middle-section-content .images img {
-  width: 256px;
-  height: 256px;
+  max-width: 256px;
+  min-width: 0;
   border-radius: 8px;
 }
 .middle-section .middle-section-content .text-content {
@@ -255,6 +259,51 @@
 }
 .last-section footer .button-component .version-text {
   color: #D9B8FF;
+}
+
+@media (max-width: 768px) {
+  .header .header-hero {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "left-hero right-hero" "text-content text-content";
+    column-gap: var(--sp-400);
+    row-gap: var(--sp-900);
+    overflow: clip;
+  }
+  .header .header-hero .hero-image-left {
+    grid-area: left-hero;
+    position: static;
+    top: 0px;
+    min-width: 0px;
+    align-self: end;
+    justify-self: end;
+  }
+  .header .header-hero .hero-image-right {
+    grid-area: right-hero;
+    position: static;
+    top: 0px;
+    left: 0px;
+    min-width: 0px;
+  }
+  .header .header-hero .header-hero-grid-content {
+    grid-area: text-content;
+    align-self: end;
+    justify-self: center;
+  }
+  .middle-section .middle-section-content .images {
+    display: flex;
+    gap: var(--sp-300);
+  }
+  .last-section footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-300);
+    text-align: center;
+  }
+  .last-section footer .button-component {
+    align-self: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
