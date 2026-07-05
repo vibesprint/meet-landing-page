@@ -1,5 +1,37 @@
+@use 'colors';
+@use 'fonts';
+
 .button-component {
   padding: var(--sp-200) var(--sp-500);
   border-radius: 29px;
   border: none;
+}
+
+.number-line {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: stretch;
+  align-items: center;
+
+  .line {
+    background-color: colors.$slate-300;
+    width: 1px;
+    min-height: 80px;
+    flex-grow: 1;
+  }
+
+  p {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid colors.$slate-300;
+    background-color: colors.$white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: colors.$slate-600;
+    @include fonts.text-preset-5;
+    }
 }

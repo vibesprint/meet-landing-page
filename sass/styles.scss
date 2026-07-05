@@ -115,34 +115,6 @@
     align-items: center;
     gap: var(--sp-800);
 
-    .numbering {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      justify-content: stretch;
-      align-items: center;
-
-      .line {
-        background-color: colors.$slate-300;
-        width: 1px;
-        min-height: 80px;
-        flex-grow: 1;
-      }
-
-      p {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        border: 1px solid colors.$slate-300;
-        background-color: colors.$white;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: colors.$slate-600;
-        @include fonts.text-preset-5;
-      }
-    }
 
     .images {
       display: flex;
@@ -189,4 +161,44 @@
 
   }
 
+}
+
+.last-section {
+
+  footer {
+    margin-top: -28px;
+    padding: var(--sp-1400) var(--sp-1000);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-400);
+    justify-items: center;
+    align-items: top;
+    background-image:
+    linear-gradient(rgba(colors.$cyan-600, 90%), rgba(colors.$cyan-600, 90%)),
+    url("../assets/desktop/image-footer.jpg");
+    background-size: cover;
+
+    .heading {
+      @include fonts.text-preset-2;
+      color: colors.$white;
+      justify-self: start;
+    }
+
+    .copy {
+      @include fonts.text-preset-4;
+      color: colors.$white;
+    }
+
+    .button-component {
+      justify-self: end;
+      align-self: start;
+      background-color: #B18BDD;
+      @include fonts.text-preset-5;
+      color: colors.$white;
+      .version-text {
+        color: colors.$purple-300;
+      }
+    }
+
+  }
 }
