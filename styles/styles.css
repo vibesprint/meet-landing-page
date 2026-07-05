@@ -108,7 +108,7 @@
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 110%;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0rem;
   color: #87879D;
 }
 .header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-buttons {
@@ -196,7 +196,7 @@
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 110%;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0rem;
   color: #87879D;
   max-width: 65ch;
 }
@@ -226,7 +226,7 @@
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 110%;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0rem;
   color: #FAFAFA;
 }
 .last-section footer .button-component {
