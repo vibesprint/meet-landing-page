@@ -1,4 +1,6 @@
 @use 'spacings';
+@use 'colors';
+@use 'fonts';
 
 
 * {
@@ -31,10 +33,11 @@
   url("../assets/desktop/image-hero-right.png");
 
   background-position:
-  left center,
-  right center;
+  left var(--sp-800),
+  right calc(2 * var(--sp-800));
 
-  background-size: auto calc(100% - (2 * var(--sp-800)));
+  // background-size: auto calc(100% - (2 * var(--sp-800)));
+  background-size: 394px 303px;
   background-repeat: no-repeat;
 
   .header-hero-grid {
@@ -55,6 +58,51 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+
+      .header-hero-heading {
+        @include fonts.text-preset-1;
+        color: colors.$slate-900;
+        min-width: 448px;
+      }
+
+      .header-hero-copy {
+        @include fonts.text-preset-4;
+        color: colors.$slate-600;
+      }
+
+      .header-hero-buttons {
+        display: flex;
+        gap: var(--sp-200);
+
+      }
+
+      .header-hero-download-button {
+        background-color: #71C0D4;
+        @include fonts.text-preset-5;
+
+        .text {
+          color: colors.$white;
+        }
+
+        .version {
+          color: colors.$cyan-300;
+        }
+      }
+
+      .header-hero-whatisit-button {
+        background-color: #B186DD;
+        @include fonts.text-preset-5;
+        color: colors.$white;
+      }
+
+
+
     }
   }
+}
+
+.button-component {
+  padding: var(--sp-200) var(--sp-500);
+  border-radius: 29px;
+  border: none;
 }

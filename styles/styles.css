@@ -36,8 +36,8 @@
   display: flex;
   padding: var(--sp-800) var(--sp-1000);
   background-image: url("../assets/desktop/image-hero-left.png"), url("../assets/desktop/image-hero-right.png");
-  background-position: left center, right center;
-  background-size: auto calc(100% - 2 * var(--sp-800));
+  background-position: left var(--sp-800), right calc(2 * var(--sp-800));
+  background-size: 394px 303px;
   background-repeat: no-repeat;
 }
 .header .header-hero .header-hero-grid {
@@ -57,6 +57,56 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-heading {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+  color: #28283D;
+  min-width: 448px;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-copy {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 110%;
+  letter-spacing: 0.25rem;
+  color: #87879D;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-buttons {
+  display: flex;
+  gap: var(--sp-200);
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-download-button {
+  background-color: #71C0D4;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0rem;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-download-button .text {
+  color: #FAFAFA;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-download-button .version {
+  color: #8FE3F9;
+}
+.header .header-hero .header-hero-grid .header-hero-grid-content .header-hero-whatisit-button {
+  background-color: #B186DD;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #FAFAFA;
+}
+
+.button-component {
+  padding: var(--sp-200) var(--sp-500);
+  border-radius: 29px;
+  border: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
