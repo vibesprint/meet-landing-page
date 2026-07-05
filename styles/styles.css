@@ -12,6 +12,12 @@
   --sp-50: 4px;
 }
 
+.button-component {
+  padding: var(--sp-200) var(--sp-500);
+  border-radius: 29px;
+  border: none;
+}
+
 * {
   margin: 0;
 }
@@ -103,10 +109,95 @@
   color: #FAFAFA;
 }
 
-.button-component {
-  padding: var(--sp-200) var(--sp-500);
-  border-radius: 29px;
-  border: none;
+.middle-section {
+  padding: var(--sp-700) var(--sp-1000) var(--sp-900) var(--sp-1000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middle-section .middle-section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-800);
+}
+.middle-section .middle-section-content .numbering {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: stretch;
+  align-items: center;
+}
+.middle-section .middle-section-content .numbering .line {
+  background-color: #D1D1DF;
+  width: 1px;
+  min-height: 80px;
+  flex-grow: 1;
+}
+.middle-section .middle-section-content .numbering p {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #D1D1DF;
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #87879D;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0rem;
+}
+.middle-section .middle-section-content .images {
+  display: flex;
+  gap: var(--sp-400);
+}
+.middle-section .middle-section-content .images img {
+  width: 256px;
+  height: 256px;
+  border-radius: 8px;
+}
+.middle-section .middle-section-content .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-400);
+  text-align: center;
+}
+.middle-section .middle-section-content .text-content .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-200);
+}
+.middle-section .middle-section-content .text-content .heading p {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 110%;
+  letter-spacing: 0.25rem;
+  color: #4D96A9;
+}
+.middle-section .middle-section-content .text-content .heading h2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+  color: #28283D;
+  max-width: 445px;
+}
+.middle-section .middle-section-content .text-content p {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 110%;
+  letter-spacing: 0.25rem;
+  color: #87879D;
+  max-width: 65ch;
 }
 
 /*# sourceMappingURL=styles.css.map */
