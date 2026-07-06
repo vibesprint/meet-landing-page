@@ -159,7 +159,6 @@
 .middle-section .middle-section-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: var(--sp-800);
   max-width: 100%;
 }
@@ -175,6 +174,7 @@
 .middle-section .middle-section-content .text-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--sp-400);
   text-align: center;
 }
@@ -209,7 +209,7 @@
   line-height: 110%;
   letter-spacing: 0rem;
   color: #87879D;
-  max-width: 65ch;
+  max-width: 45ch;
 }
 
 .last-section footer {
@@ -332,17 +332,17 @@
   .middle-section .middle-section-content .images img {
     max-width: 100%;
   }
-}
-.last-section footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--sp-300);
-  text-align: center;
-  padding: var(--sp-800) var(--sp-400);
-}
-.last-section footer .button-component {
-  align-self: auto;
+  .last-section footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-300);
+    text-align: center;
+    padding: var(--sp-800) var(--sp-400);
+  }
+  .last-section footer .button-component {
+    align-self: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
