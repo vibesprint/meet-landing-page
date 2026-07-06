@@ -78,14 +78,16 @@
   column-gap: var(--sp-400);
 }
 .header .header-hero .hero-image-left {
-  position: relative;
-  left: -186px;
   grid-area: left-hero;
+}
+.header .header-hero .hero-image-left img {
+  position: relative;
+  left: -25%;
 }
 .header .header-hero .hero-image-right {
   position: relative;
-  top: 57px;
-  left: 96px;
+  top: 10%;
+  left: 20%;
   grid-area: right-hero;
 }
 .header .header-hero .header-hero-grid-content {
@@ -222,6 +224,7 @@
   align-items: top;
   background-image: linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../assets/desktop/image-footer.jpg");
   background-size: cover;
+  background-position: center;
 }
 .last-section footer .heading {
   font-family: "Red Hat Display", sans-serif;
@@ -264,25 +267,17 @@
   .header .header-hero {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "left-hero right-hero" "text-content text-content";
+    grid-template-areas: "left-hero left-hero" "text-content text-content";
     column-gap: var(--sp-400);
     row-gap: var(--sp-900);
     overflow: clip;
   }
   .header .header-hero .hero-image-left {
     grid-area: left-hero;
-    position: static;
-    top: 0px;
-    min-width: 0px;
-    align-self: end;
-    justify-self: end;
+    object-position: center;
   }
   .header .header-hero .hero-image-right {
-    grid-area: right-hero;
-    position: static;
-    top: 0px;
-    left: 0px;
-    min-width: 0px;
+    display: none;
   }
   .header .header-hero .header-hero-grid-content {
     grid-area: text-content;
@@ -299,6 +294,8 @@
     align-items: center;
     gap: var(--sp-300);
     text-align: center;
+    background-image: linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../assets/tablet/image-footer.jpg");
+    background-size: cover;
   }
   .last-section footer .button-component {
     align-self: auto;
@@ -339,6 +336,8 @@
     gap: var(--sp-300);
     text-align: center;
     padding: var(--sp-800) var(--sp-400);
+    background-image: linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../assets/mobile/image-footer.jpg");
+    background-size: cover;
   }
   .last-section footer .button-component {
     align-self: auto;

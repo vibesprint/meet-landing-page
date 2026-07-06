@@ -25,7 +25,12 @@
         </div>
 
         <div class="header-hero" >
-            <img class="hero-image-left" src="./assets/desktop/image-hero-left.png" alt="hero image" />
+
+            <picture class="hero-image-left" >
+            <source srcset="./assets/tablet/image-hero.png" media="(max-width: 768px)" />
+            <img src="./assets/desktop/image-hero-left.png" alt="hero image" />
+            </picture>
+
                 <div class="header-hero-grid-content" >
                     <h1 class="header-hero-heading" >Group Chat for Everyone</h1>
                     <p class="header-hero-copy" >Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>

@@ -38,15 +38,17 @@
 
 
   .hero-image-left {
-    position: relative;
-    left: -186px;
     grid-area: left-hero;
+    img {
+      position: relative;
+      left: -25%;
+    }
   }
 
   .hero-image-right {
     position: relative;
-    top: 57px;
-    left: 96px;
+    top: 10%;
+    left: 20%;
     grid-area: right-hero;
   }
 
@@ -183,6 +185,7 @@
     linear-gradient(rgba(colors.$cyan-600, 90%), rgba(colors.$cyan-600, 90%)),
     url("../assets/desktop/image-footer.jpg");
     background-size: cover;
+    background-position: center;
 
     .heading {
       @include fonts.text-preset-2;
@@ -218,7 +221,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
-    "left-hero right-hero"
+    "left-hero left-hero"
     "text-content text-content";
     // align-content: center;
     // justify-content: center;
@@ -228,19 +231,11 @@
 
     .hero-image-left {
       grid-area: left-hero;
-      position: static;
-      top: 0px;
-      min-width: 0px;
-      align-self: end;
-      justify-self: end;
+      object-position: center;
     }
 
     .hero-image-right {
-      grid-area: right-hero;
-      position: static;
-      top: 0px;
-      left: 0px;
-      min-width: 0px;
+      display: none;
     }
 
     .header-hero-grid-content {
@@ -271,6 +266,11 @@
       align-items: center;
       gap: var(--sp-300);
       text-align: center;
+
+      background-image:
+      linear-gradient(rgba(colors.$cyan-600, 90%), rgba(colors.$cyan-600, 90%)),
+      url("../assets/tablet/image-footer.jpg");
+      background-size: cover;
 
       .button-component {
         align-self: auto;
@@ -332,6 +332,11 @@
       gap: var(--sp-300);
       text-align: center;
       padding: var(--sp-800) var(--sp-400);
+
+      background-image:
+      linear-gradient(rgba(colors.$cyan-600, 90%), rgba(colors.$cyan-600, 90%)),
+      url("../assets/mobile/image-footer.jpg");
+      background-size: cover;
 
       .button-component {
         align-self: auto;
